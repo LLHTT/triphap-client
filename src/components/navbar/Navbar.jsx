@@ -3,7 +3,7 @@ import { NavLink, Link } from 'react-router-dom'
 import { BsArrowRight } from 'react-icons/bs'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import { useState } from 'react'
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logo1.png'
 
 import useClickOutside from '../../CustomHooks/ClickOutside'
 
@@ -37,7 +37,6 @@ const Navbar = ({ BurgerColour }) => {
         {/* NAV-BURGER */}
         <div 
           className={styles.mobile_menu}
-          style={{color: BurgerColour}}
           onClick={() => setIsNavOpen(!isNavOpen)}
         >
           <FaBars />
@@ -69,16 +68,16 @@ const Navbar = ({ BurgerColour }) => {
 
         {/* LOGIN */}
         <Link to="/auth" className={styles.login_container}>
-          <span style={{ color: BurgerColour }}>Login</span>
-          <BsArrowRight style={{ color: BurgerColour }} />
+          <span>Login</span>
+          <BsArrowRight />
         </Link>
       </nav>
     </div>
   )
 }
 
-Navbar.defaultProps = {
-  BurgerColour: "rgb(112, 112, 112)",
-}
+// Navbar.defaultProps = {
+//   BurgerColour: "#000",
+// }
 
 export default Navbar

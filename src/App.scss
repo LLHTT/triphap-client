@@ -10,14 +10,14 @@
 }
 
 :root {
-  // --primary: #043f46;
-  --dark-primary: #1a373a;
-  // --darkest-primary: rgb(7, 37, 35); // h1-Section4
+  // --dark-primary: #1a373a;
+  --dark-primary: #1a223a;
+  --darkest-primary: #0c142d;
 
-  --primary: #d9b65e;
-  // --dark-primary: #473600;
-  // --dark-primary: #321b00;
-  // --dark-primary: #201100;
+  --primary: #dfbc63;
+  // --primary: #e4c47f; 
+
+  --accent: #71bded;
   --gray: rgb(136, 136, 136);
   --white: #ffffff;
 }
@@ -43,7 +43,7 @@ body {
 }
 
 main > * {
-  padding: 0 3rem;
+  padding: 0 4rem;
 
   @media screen and (max-width: 768px) {
       padding: 0 2rem;
