@@ -25,7 +25,7 @@ const Property = () => {
                 id: params.propertyId,
                 category: "Buy/Rent",
                 panel: house.attributes.Panel,
-                imageSource: `https://triphap-backend.herokuapp.com${house.attributes.Preview_image.data.attributes.url}`,
+                imageSource: `http://localhost:1337${house.attributes.Preview_image.data.attributes.url}`,
                 district: house.attributes.location.data.attributes.District,
                 size: house.attributes.Size,
                 street: house.attributes.Street,

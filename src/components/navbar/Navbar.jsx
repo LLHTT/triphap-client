@@ -7,15 +7,15 @@ import logo from '../../assets/logo1.png'
 
 import useClickOutside from '../../CustomHooks/ClickOutside'
 
-const Navbar = ({ BurgerColour }) => {
-  const MenuLink = ({ url, path }) => {
+const Navbar = () => {
+  const MenuLink = ({ url, text }) => {
     return (
       <li className={styles.navlink}>
         <NavLink 
           to={`${url}`}
           className={({ isActive }) => (isActive ? styles.active : undefined)}
         >
-          {`${path}`}
+          {`${text}`}
         </NavLink>
       </li>
     )
@@ -55,12 +55,12 @@ const Navbar = ({ BurgerColour }) => {
           </div>
 
           {/* LI - MENULINK */}
-          <MenuLink url="/" path="Home"/>
-          <MenuLink url="/buy" path="Purchasing"/>
-          <MenuLink url="/rent" path="Renting"/>
-          <MenuLink url="/search" path="Search For House"/>
-          <MenuLink url="/about" path="About Us"/>
-          <MenuLink url="/about" path="Contact"/>
+          <MenuLink url="/" text="Home"/>
+          <MenuLink url="/buy" text="Purchasing"/>
+          <MenuLink url="/rent" text="Renting"/>
+          <MenuLink url="/search" text="Search For House"/>
+          <MenuLink url="/about" text="About Us"/>
+          <MenuLink url="/about" text="Contact"/>
           <Link to="/auth" className={styles.login}>
             <span>Login</span>
           </Link>
@@ -75,9 +75,5 @@ const Navbar = ({ BurgerColour }) => {
     </div>
   )
 }
-
-// Navbar.defaultProps = {
-//   BurgerColour: "#000",
-// }
 
 export default Navbar

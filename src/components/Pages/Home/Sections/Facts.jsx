@@ -1,5 +1,5 @@
 import styles from "./Facts.module.scss"
-import building3 from "../../../../assets/building3.jpg"
+import building3 from "../../../../assets/building9.jpg"
 
 const Facts = () => {
   return (

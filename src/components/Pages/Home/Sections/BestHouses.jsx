@@ -20,7 +20,7 @@ const CARD_DATA = gql`
           Direction
           Floors
           Type
-          Preview_image{
+          Image{
             data{
               attributes{
                 url
@@ -31,7 +31,7 @@ const CARD_DATA = gql`
           location{
             data{
               attributes{
-                District
+                Location
               }
             }
           }
@@ -77,8 +77,8 @@ const BestHouses = () => {
                     info={{
                       id: house.id,
                       panel: house.attributes.Panel,
-                      imageSource: `https://triphap-backend.herokuapp.com${house.attributes.Preview_image.data.attributes.url}`,
-                      district: house.attributes.location.data.attributes.District,
+                      imageSource: `http://localhost:1337${house.attributes.Image.data.attributes.url}`,
+                      district: house.attributes.location.data.attributes.Location,
                       size: house.attributes.Size,
                       street: house.attributes.Street,
                       rooms: house.attributes.Rooms,
