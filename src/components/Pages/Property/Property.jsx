@@ -12,8 +12,8 @@ const Property = () => {
   })
 
   const queryHandler = () => {
-    if (loading) return <h1>Loading</h1>
-    if (error) return <h1>Error</h1>
+    if (loading) return <h1>Loading...</h1>
+    if (error) return <h1>Error...</h1>
     if (data) {
       if (data.houses.data.length) {
         let house = data.houses.data[0]
@@ -25,7 +25,7 @@ const Property = () => {
                 id: params.propertyId,
                 category: "Buy/Rent",
                 panel: house.attributes.Panel,
-                imageSource: `http://localhost:1337${house.attributes.Preview_image.data.attributes.url}`,
+                imageSource: house.attributes.ImageUrl,
                 district: house.attributes.location.data.attributes.District,
                 size: house.attributes.Size,
                 street: house.attributes.Street,

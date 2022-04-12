@@ -28,7 +28,7 @@ const Search = () => {
   return (
     <main>
       <Navbar />
-      <h1 className={styles.title}>Search For Houses</h1>
+      <h1 className={styles.title}>Search For House</h1>
       <SearchContext.Provider value={value}>
         <Filters />
         <QueryCards />

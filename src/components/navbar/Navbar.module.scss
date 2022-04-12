@@ -5,7 +5,7 @@ a {
 .navbar_container {
   position: relative;
   z-index: 999;
-  padding-block: .5rem;
+  padding-block: 1rem;
 
   nav {
     display: flex;
@@ -14,7 +14,7 @@ a {
     .brand_logo {
       transform: translateY(4px);
         img {
-        height: 60px;
+        height: 35px;
         // width: 60px;
       }
     }
@@ -139,10 +139,11 @@ a {
       display: none;
       @media screen and (max-width: 1000px) {
           display: block;
-          font-size: 1.4rem;
+          font-size: 1.3rem;
           color: var(--darkest-primary);
           cursor: pointer;
           padding: 0.3rem;
+          transform: translateY(4px);
       }
     }
   }

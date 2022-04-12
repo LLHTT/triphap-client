@@ -34,6 +34,9 @@
               font-weight: 600;
               border: 1px solid transparent;
               transition: all ease-in-out 200ms;
+              border-radius: 15px;
+              border: 1px solid #dbdbdb;
+              box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
               &:hover {
                   // border-color: whitesmoke;
                   // background: var(--primary);
@@ -115,7 +118,8 @@
               color: whitesmoke;
               transition: all ease-in-out 200ms;
               border: 1px solid transparent;
-
+              border-radius: 15px;
+            
               &:hover {
                   background: whitesmoke;
                   border-color: var(--dark-primary);

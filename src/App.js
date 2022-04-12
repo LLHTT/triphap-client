@@ -9,7 +9,7 @@ import Property from './components/Pages/Property/Property'
 import Search from './components/Pages/Search/Search'
 
 const client = new ApolloClient({
-  uri: 'http://localhost:1337/graphql',
+  uri: 'https://triphap-backend.herokuapp.com/graphql',
   cache: new InMemoryCache(),
   playground: true,
 })

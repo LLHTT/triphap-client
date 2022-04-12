@@ -25,7 +25,7 @@ const Buy = () => {
                   info={{
                     id: house.id,
                     panel: house.attributes.Panel,
-                    imageSource: `http://localhost:1337${house.attributes.Preview_image.data.attributes.url}`,
+                    imageSource: house.attributes.ImageUrl,
                     district: house.attributes.location.data.attributes.District,
                     size: house.attributes.Size,
                     street: house.attributes.Street,

@@ -73,7 +73,7 @@ const Footer = () => {
           </li>
           <li>
             <div className={styles.subscribe_input}>
-              <input type="text" placeholder="Email Andress" />
+              <input type="text" placeholder="Email Address" />
               <button>
                 <BsArrowRight />
               </button>

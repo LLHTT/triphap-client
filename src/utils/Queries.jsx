@@ -1,7 +1,7 @@
 import { gql } from '@apollo/client'
 
 const BUY_CARDS = gql `
-  query GET_BUY_CARDS {
+  query BUY_CARDS {
     houses(
       filters: { categories: { Category: { contains: "Buy" } } }
       pagination: { limit: 20 }
@@ -16,18 +16,12 @@ const BUY_CARDS = gql `
           Direction
           Floors
           Type
+          ImageUrl
           Price
-          Preview_image{
-            data{
-              attributes{
-                url
-              }
-            }
-          }
           location{
             data{
               attributes{
-                District
+                Location
               }
             }
           }
@@ -44,7 +38,7 @@ const BUY_CARDS = gql `
   }
 `
 const RENT_CARDS = gql `
-  query GET_RENT_CARDS {
+  query RENT_CARDS {
     houses(filters: { categories: { Category : { contains: "Rent" } } }) {
       data{
         id
@@ -56,18 +50,12 @@ const RENT_CARDS = gql `
           Direction
           Floors
           Type
+          ImageUrl
           Rent
-          Preview_image{
-            data{
-              attributes{
-                url
-              }
-            }
-          }
           location{
             data{
               attributes{
-                District
+                Location
               }
             }
           }
@@ -85,7 +73,7 @@ const RENT_CARDS = gql `
 `
 
 const ID_CARD = gql `
-  query GET_ID_CARD($id: ID) {
+  query ID_CARD($id: ID) {
     houses(filters: { id: { eq: $id } }) {
       data{
         id
@@ -97,20 +85,14 @@ const ID_CARD = gql `
           Direction
           Floors
           Type
+          ImageUrl
           Price
           Rent
           Description
-          Preview_image{
-            data{
-              attributes{
-                url
-              }
-            }
-          }
           location{
             data{
               attributes{
-                District
+                Location
               }
             }
           }
@@ -128,7 +110,7 @@ const ID_CARD = gql `
 `
 
 const FILTERED_CARDS = gql`
-  query GET_FILTERED_CARDS(
+  query FILTERED_CARDS(
     $cat: String
     $maxPrice: Float
     $minPrice: Float
@@ -153,20 +135,14 @@ const FILTERED_CARDS = gql`
           Direction
           Floors
           Type
+          ImageUrl
           Price
           Rent
           Description
-          Preview_image{
-            data{
-              attributes{
-                url
-              }
-            }
-          }
           location{
             data{
               attributes{
-                District
+                Location
               }
             }
           }

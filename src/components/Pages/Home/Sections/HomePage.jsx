@@ -25,8 +25,7 @@ const HomePage = () => {
           <div className={styles.slogan}>
             <h1>TriPhap Real Estate</h1>
             <p>
-              Search and find your dream house at affordable prices, with the
-              best quality.
+              Search and find your dream house with the best quality and price
             </p>
           </div>
 

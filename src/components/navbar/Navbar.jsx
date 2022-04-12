@@ -3,7 +3,7 @@ import { NavLink, Link } from 'react-router-dom'
 import { BsArrowRight } from 'react-icons/bs'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import { useState } from 'react'
-import logo from '../../assets/logo1.png'
+import logo from '../../assets/logo.png'
 
 import useClickOutside from '../../CustomHooks/ClickOutside'
 
