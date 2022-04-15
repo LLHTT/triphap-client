@@ -110,7 +110,7 @@ const ID_CARD = gql `
 `
 
 const FILTERED_CARDS = gql`
-  query FILTERED_CARDS(
+  query GET_FILTERED_CARDS(
     $cat: String
     $maxPrice: Float
     $minPrice: Float
@@ -138,7 +138,6 @@ const FILTERED_CARDS = gql`
           ImageUrl
           Price
           Rent
-          Description
           location{
             data{
               attributes{

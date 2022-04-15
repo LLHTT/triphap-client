@@ -3,7 +3,7 @@ import { NavLink, Link } from 'react-router-dom'
 import { BsArrowRight } from 'react-icons/bs'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import { useState } from 'react'
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logo1.png'
 
 import useClickOutside from '../../CustomHooks/ClickOutside'
 
@@ -60,7 +60,7 @@ const Navbar = () => {
           <MenuLink url="/rent" text="Renting"/>
           <MenuLink url="/search" text="Search For House"/>
           <MenuLink url="/about" text="About Us"/>
-          <MenuLink url="/about" text="Contact"/>
+          <MenuLink url="/contact" text="Contact"/>
           <Link to="/auth" className={styles.login}>
             <span>Login</span>
           </Link>

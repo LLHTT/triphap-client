@@ -24,67 +24,68 @@ const Card = ({ info, showInfo, secondClass }) => {
   };
 
   return (
-    <div className={`${styles.card_container} ${secondClass}`}>
-      <div className={styles.image_container}>
-        {/* IMAGE */}
-        <div className={styles.image_buy_btn}>
-          <Link to="/"><GoPrimitiveDot /> {info.panel}</Link>
-        </div>
-        <img src={info.imageSource} alt="building" />
-        {/* DISTRICT */}
-        <h3>{info.district}</h3>
-        {/* STREET */}
-        <h4>
-          <p className={styles.street}>{info.street} • </p>
-          <p className={styles.type}>{info.type}</p>
-        </h4>
-        {/* ROOMS ETC */}
-        <div className={styles.info}>
-          {/* ROW1 */}
-          <div className={styles.row1}>
-            {/* ROOMS */}
-            <div className={styles.rooms}>
-              <BsDoorClosedFill />
-              <span>{`${info.rooms} Rooms`}</span>
+    <Link to={`/property/${info.id}`}>
+      <div className={`${styles.card_container} ${secondClass}`}>
+        <div className={styles.image_container}>
+          {/* IMAGE */}
+          <div className={styles.image_buy_btn}>
+            <Link to="/"><GoPrimitiveDot /> {info.panel}</Link>
+          </div>
+          <img src={info.imageSource} alt="building" />
+          {/* DISTRICT */}
+          <h3>{info.district}</h3>
+          {/* STREET */}
+          <h4>
+            <p className={styles.street}>{info.street} • </p>
+            <p className={styles.type}>{info.type}</p>
+          </h4>
+          {/* ROOMS ETC */}
+          <div className={styles.info}>
+            {/* ROW1 */}
+            <div className={styles.row1}>
+              {/* ROOMS */}
+              <div className={styles.rooms}>
+                <BsDoorClosedFill />
+                <span>{`${info.rooms} Rooms`}</span>
+              </div>
+              {/* FLOORS */}
+              <div className={styles.floors}>
+                <FaRegBuilding />
+                <span>{`${info.floors} Floors`}</span>
+              </div>
             </div>
-            {/* FLOORS */}
-            <div className={styles.floors}>
-              <FaRegBuilding />
-              <span>{`${info.floors} Floors`}</span>
+            {/* ROW2 */}
+            <div className={styles.row2}>
+              {/* Size */}
+              <div className={styles.size}>
+                <BsBuilding />
+                <span>{`${info.size}`}</span>
+              </div>
+              {/* Direction */}
+              <div className={styles.direction}>
+                <GiMultiDirections />
+                <span>{`${info.direction}`}</span>
+              </div>
             </div>
           </div>
-          {/* ROW2 */}
-          <div className={styles.row2}>
-            {/* Size */}
-            <div className={styles.size}>
-              <BsBuilding />
-              <span>{`${info.size}`}</span>
+          <div className={styles.card_buy}>
+            {/* PRICES */}
+            <div className={styles.prices}>
+              <h2
+                style={showInfo.price ? {} : { display: "none" }}
+              >{`${convertPrice(info.price)}$`}</h2>
+              <h2
+                style={showInfo.rent ? {} : { display: "none" }}
+              >{`${convertRent(info.rent)}$/m`}</h2>
             </div>
-            {/* Direction */}
-            <div className={styles.direction}>
-              <GiMultiDirections />
-              <span>{`${info.direction}`}</span>
+            {/* SEE MORE BUTTON */}
+            <div className={styles.card_btn}>
+              <Link to={`/property/${info.id}`}>See More</Link>
             </div>
-          </div>
-        </div>
-
-        <div className={styles.card_buy}>
-          {/* PRICES */}
-          <div className={styles.prices}>
-            <h2
-              style={showInfo.price ? {} : { display: "none" }}
-            >{`${convertPrice(info.price)}$`}</h2>
-            <h2
-              style={showInfo.rent ? {} : { display: "none" }}
-            >{`${convertRent(info.rent)}$/m`}</h2>
-          </div>
-          {/* SEE MORE BUTTON */}
-          <div className={styles.card_btn}>
-            <Link to={`/property/${info.id}`}>See More</Link>
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   )
 }
 

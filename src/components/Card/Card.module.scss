@@ -3,7 +3,7 @@
   flex-direction: column;
   width: max-content;
   padding: 1.2rem;
-  border: 1px solid rgb(207, 207, 207);
+  border: 1px solid rgb(204, 204, 204);
   user-select: none;
 
   @media screen and (max-width: 425px) {
@@ -14,8 +14,8 @@
       position: relative;
       margin-bottom: 1rem;
       img {
-          width: 320px;
-          height: 250px;
+          width: 300px;
+          height: 200px;
           object-fit: cover;
           @media screen and (max-width: 425px) {
               width: 100%;
@@ -32,9 +32,10 @@
               background: white;
               color: var(--dark-primary);
               font-weight: 600;
+              font-size: 0.9rem;
               border: 1px solid transparent;
               transition: all ease-in-out 200ms;
-              border-radius: 15px;
+              border-radius: 20px;
               border: 1px solid #dbdbdb;
               box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
               &:hover {
@@ -70,8 +71,7 @@
   }
 
   .info {
-      margin-top: 1.5rem;
-      margin-bottom: 1.5rem;
+      margin-block: .5rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -95,12 +95,12 @@
           gap: 4px;
           align-items: center;
           svg {
-              color: rgb(165, 165, 165);
+              color: var(--grey);
               font-size: 1.1rem;
           }
           span {
               font-size: 0.9rem;
-              color: rgb(165, 165, 165);
+              color: var(--grey);
           }
       }
   }
@@ -118,7 +118,6 @@
               color: whitesmoke;
               transition: all ease-in-out 200ms;
               border: 1px solid transparent;
-              border-radius: 15px;
             
               &:hover {
                   background: whitesmoke;

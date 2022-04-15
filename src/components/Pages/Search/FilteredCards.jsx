@@ -31,18 +31,18 @@ const FilteredCards = ({ houses }) => {
           secondClass={styles.card}
           info={{
             id: house.id,
-            panel: `${house.attributes.Panel}`,
-            imageSource: `${house.attributes.ImageUrl}`,
+            panel: house.attributes.Panel,
+            imageSource: house.attributes.ImageUrl,
             category: checkHouseCategory(house),
-            district: `${house.attributes.location.data.attributes.District}`,
-            size: `${house.attributes.Size}`,
-            street: `${house.attributes.Street}`,
-            rooms: `${house.attributes.Rooms}`,
-            floors: `${house.attributes.Floors}`,
-            direction: `${house.attributes.Direction}`,
-            type: `${house.attributes.Type}`,
-            rent: house.attributes.Rent,
+            district: house.attributes.location.data.attributes.Location,
+            size: house.attributes.Size,
+            street: house.attributes.Street,
+            rooms: house.attributes.Rooms,
+            floors: house.attributes.Floors,
+            direction: house.attributes.Direction,
+            type: house.attributes.Type,
             price: house.attributes.Price,
+            rent: house.attributes.Rent,
           }}
           showInfo={{
             price: showPrice(house),
