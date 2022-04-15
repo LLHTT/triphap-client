@@ -50,8 +50,8 @@ const BestHouses = () => {
   return (
     <section className={styles.section_3}>
       <div className={styles.section_3_title}>
-        <h1>Best Houses</h1>
-        <ArrowButton text="See more" path="buy" />
+        <h1>Best Houses in Ho Chi Minh City</h1>
+        <ArrowButton text="See all houses" path="buy" />
       </div>
 
       {/* CARDS / CAROUSEL */}
